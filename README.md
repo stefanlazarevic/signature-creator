@@ -15,7 +15,7 @@
 #### Signature module constructor:
 
 ```javascript
-    new Signature(HTMLCanvasElement?, options?);
+    new Signature(HTMLCanvasElement?, options?, initRender?);
 ```
 
 #### Default Signature module options:

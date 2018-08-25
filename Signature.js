@@ -14,8 +14,8 @@
         fontSize: 24,
     };
 
-    function Signature(canvas, options) {
-        return new Signature.init(canvas, options);
+    function Signature(canvas, options, initRender = false) {
+        return new Signature.init(canvas, options, initRender);
     }
 
     /**
@@ -25,7 +25,7 @@
      * @param {object} options Object containing signature options.
      * @param {boolean} initRender Flag that determine if signature has to be render initially.
      */
-    Signature.init = function(canvas, options, initRender = false) {
+    Signature.init = function(canvas, options, initRender) {
         this.canvas = canvas instanceof HTMLCanvasElement ? canvas : document.createElement('canvas');
         this.context = this.canvas.getContext('2d');
 

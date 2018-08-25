@@ -88,9 +88,7 @@
             backgroundColor: signatureBackgroundColorElement.value,
             fontSize: fontSizeElement.value,
             fontFamily: fontFamilySelectElement.value,
-        }).render().downloadAs('jpg');
-
-        Signature(document.getElementById('canvas'));
+        }).render().downloadAs('png');
     });
 
 }(window));

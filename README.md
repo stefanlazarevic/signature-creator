@@ -103,6 +103,7 @@
 
 ### Todo tracklist:
 
+- Support generator in offline version.
 - Make signature generator as a module. ✔
 - Make rotate signature text feature.
 - Make custom font family import.

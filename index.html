@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Stefan Lazarevic">
+    <title>Signature Generator</title>
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Great+Vibes|Indie+Flower|Tangerine&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+    <body>
+        <div class="flex__wrapper">
+            <div class="flex--1">
+                <div class="header">
+                    <h1 class="header__title">Simple Signature Creator</h1>
+                    <h2 class="header__subtitle">Create your first online signature, and sign in new contracts without printing them.</h2>
+                </div>
+                <div class="pannel--inner">
+                    <div class="form__group">
+                        <label for="fontFamily" class="font__label">Font Family</label>
+                        <select name="fontFamily" id="fontFamily" class="form__select js-fontFamily"></select>
+                    </div>
+                    <div class="form__group">
+                        <label for="fontFamily" class="font__label">Signature text</label>
+                        <input type="text" name="signature" id="signature" class="form__input js-signature">
+                    </div>
+                    <div class="form__group">
+                        <label for="fontFamily" class="font__label">Font Size</label>
+                        <div class="form__group--inner">
+                            <input type="range" name="fontSize" id="fontSize" class="form__range js-fontSize" min="24" max="40" step="1" value="24">
+                        </div>
+                    </div>
+                    <div class="form__group">
+                        <label for="fontColor" class="font__label">Text color</label>
+                        <input type="color" name="fontColor" id="fontColor" class="form__color js-fontColor">
+                    </div>
+                    <div class="form__group">
+                        <label for="backgroundColor" class="font__label">Background color</label>
+                        <input type="color" name="backgroundColor" id="backgroundColor" class="form__color js-backgroundColor" value="#ffffff">
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex--1 flex--column flex--center">
+                <span id="preview" class="signature__preview js-preview"></span>
+                <div id="download" class="signature__download js-downloadButton">
+                    <span>Download</span>
+                    <!-- <select name="signatureFormat" id="signatureFormat" class="form__select form__select--inline">
+                        <option value="png">png</option>
+                        <option value="png">jpg</option>
+                    </select> -->
+                </div>
+            </div>
+            <!-- <canvas id="textCanvas" width="250" height="250"></canvas>
+            <textarea id="textarea" name="name" rows="8" cols="80"></textarea>
+            <button id="btn" type="button" name="button">Save me</button>
+            <input id="color" type="color"> -->
+        </div>
+        <script src="index.js" type="text/javascript"></script>
+    </body>
+</html>

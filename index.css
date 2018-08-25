@@ -1,0 +1,142 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+input[type=color]{
+	width: 40px;
+	height: 40px;
+	border: none;
+	border-radius: 40px;
+    background: none;
+    cursor: pointer;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+	border: solid 1px #000; /*change color of the swatch border here*/
+	border-radius: 40px;
+}
+
+.flex__wrapper {
+    display: flex;
+    padding: 0 15px;
+    height: 100%;
+    min-height: 100vh;
+    background-color: #f2f2f2;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex--1 {
+    flex: 1;
+}
+
+.flex--column {
+    flex-direction: column;
+}
+
+.flex--center {
+    align-items: center;
+    justify-content: center;
+}
+
+.header__title {
+    font-weight: 300;
+    color: #444;
+}
+
+.header__subtitle {
+    font-weight: 100;
+    color: #444;
+}
+
+.pannel--inner {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 50px;
+}
+
+.panel--left,
+.panel--right {
+    width: 50%;
+}
+
+.form__group {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.font__label {
+    display: block;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.form__input,
+.form__select,
+.form__color,
+.form__range {
+    width: 100%;
+}
+
+.form__input,
+.form__select {
+    padding: 5px 10px;
+    background-color: transparent;
+    font-size: 14px;
+    border: 0;
+    border-bottom: 1px solid #333;
+    outline: none;
+}
+
+.form__input:focus,
+.form__select:focus {
+    border-bottom-color: tomato;
+}
+
+.signature__download {
+    display: block;
+    margin: 0 auto;
+    padding: 15px 5px;
+    border: 1px solid #222;
+    text-align: center;
+    max-width: 150px;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+
+.signature__download:hover {
+    background-color: #222;
+    color: #fff;
+}
+
+.signature__preview {
+    --font-family: 'Indie Flower';
+    --font-size: 24px;
+    --font-color: '#000000';
+    --background-color: #fff;
+
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    color: var(--font-color);
+    background-color: var(--background-color);
+
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 50px;
+
+    max-width: 100%;
+    word-break: break-all;
+    word-wrap: break-word;
+}

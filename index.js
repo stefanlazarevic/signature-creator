@@ -82,40 +82,15 @@
     const downloadButtonElement = document.getElementById('download');
 
     downloadButtonElement.addEventListener('click', event => {
-        const canvas = document.createElement('canvas');
-        const canvasContext = canvas.getContext('2d');
+        Signature(null, {
+            text: previewElement.innerText,
+            textColor: fontColorElement.value,
+            backgroundColor: signatureBackgroundColorElement.value,
+            fontSize: fontSizeElement.value,
+            fontFamily: fontFamilySelectElement.value,
+        }).render().downloadAs('jpg');
 
-        // Clear canvas.
-        canvasContext.clearRect(0, 0, canvas.width, canvas.height);
-
-        // Set font size.
-        canvasContext.font = `${fontSizeElement.value}px ${fontFamilySelectElement.value}`;
-
-        // Calculate width and height.
-        const canvasWidth = Math.ceil(canvasContext.measureText(previewElement.innerText).width);
-        const canvasHeight = +fontSizeElement.value * 2;
-
-        canvas.width = canvasWidth;
-        canvas.height = canvasHeight;
-
-        // Fill background
-        canvasContext.fillStyle = signatureBackgroundColorElement.value;
-        canvasContext.fillRect(0, 0, canvas.width, canvas.height);
-
-        // Set font size.
-        canvasContext.font = `${fontSizeElement.value}px ${fontFamilySelectElement.value}`;
-
-        // Set fill color.
-        canvasContext.fillStyle = fontColorElement.value;
-
-        // Insert text
-        canvasContext.fillText(previewElement.innerText, 0, canvasHeight - canvasHeight / 3);
-
-        const imageSrc = canvas.toDataURL("image/png");
-        const downloadLinkElement = document.createElement('a');
-        downloadLinkElement.href = imageSrc;
-        downloadLinkElement.download = 'signature.png';
-        downloadLinkElement.click();
+        Signature(document.getElementById('canvas'));
     });
 
 }(window));

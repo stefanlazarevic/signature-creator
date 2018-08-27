@@ -119,8 +119,6 @@ Demo: https://stefanlazarevic.github.io/signature-creator/
 
 ### License
 
-### License
-
 Copyright (c) 2018 Stefan Lazarevic MIT
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
